@@ -28,7 +28,7 @@ class ControleurRepas
 		if ($tab == null)
 		{
 			
-			$vue = new Vue("Repas");
+			$vue = new Vue("InscriptionRepas");
 			$vue->generer(array());
 		}
 		else

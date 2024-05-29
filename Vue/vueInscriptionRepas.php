@@ -1,4 +1,9 @@
-<form action="index.php?action=addRep&id=" method="post">
+<?php $titre = 'InscriptionRep'; ?>
+
+<?php $banniere = "InscriptionRep"; ?>
+
+
+<form action="index.php?action=addRep" method="post">
                 <label for="jour">Jour :</label>
                 <select id="jour" name="jour">
                     

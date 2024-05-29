@@ -3,7 +3,7 @@
 <?php $banniere = "InscriptionRep"; ?>
 
 
-<form action="index.php?action=addRep" method="post">
+<form action="<?php echo "index.php?action=addRep&id=".$idUtilisateur; ?>" method="post">
                 <label for="jour">Jour :</label>
                 <select id="jour" name="jour">
                     
@@ -42,15 +42,16 @@
                     ?>
                 </select>
                 <br><br>
-        
+              
                 <label>Moment de la journée :</label>
-                <input type="radio" id="MS" name="timeOfjour" value="morning">
-                <label for="morning">Matin</label>
-                <input type="radio" id="MS" name="timeOfsoir" value="evening">
-                <label for="evening">Soir</label>
+                <input type="radio" id="MS" name="ms" value="midi">
+                <label for="midi">midi</label>
+                <input type="radio" id="MS" name="ms" value="soir">
+                <label for="soir">Soir</label>
                 <br><br>
         
-                <input type="submit" value="Soumettre">
+                <input type="submit" name="soumettre" value="Soumettre">
+                
             </form>
         </body>
         </html>

@@ -11,11 +11,11 @@ class Repas extends Modele
 		$repas = $this->executerRequete($requete,array($idS));
 		return $repas;
 	}
-	public function addRep($session,$date,$periode,$valide)//,$utilisateur)
+	public function addRep($session,$date,$periode,$valide,$utilisateur)
 	{
 		
-		$requete="INSERT INTO repas(session,date,periode,valide) VALUES (?,?,?,?,?);";//utilisateur = id utilisateur
-		$resultat=$this->executerRequete($requete,array($session,$date,$periode,$valide,));//$utilisateur['id']));
+		$requete="INSERT INTO repas(session,date,periode,valide,utilisateur) VALUES (?,?,?,?,?);";//utilisateur = id utilisateur
+		$resultat=$this->executerRequete($requete,array($session,$date,$periode,$valide,$utilisateur));
 		return $resultat;
 	}
 }

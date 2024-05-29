@@ -23,19 +23,18 @@ class ControleurRepas
 		$vue = new Vue("Repas");
 		$vue->generer(array('utilisateur' => $utilisateur, 'repas' => $repas));
 	}
-	public function add($tab = null)
+
+	public function add($idUtilisateur, $tab = null)
 	{
 		if ($tab == null)
 		{
-			
 			$vue = new Vue("InscriptionRepas");
-			$vue->generer(array());
+			$vue->generer(array('idUtilisateur'=>$idUtilisateur));
 		}
 		else
 		{
-			$repas = $this->repas->addUser($tab['session'],$tab['date'],$tab['periode'],$tab['valide']);
-	
-			$this->repas();
+			$repas = $this->repas->addRep($tab['session'],$tab['date'],$tab['periode'],$tab['valide'],$idUtilisateur);
+			$this->repas($idUtilisateur);
 		}
 	}
 }

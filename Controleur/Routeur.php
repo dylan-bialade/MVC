@@ -69,13 +69,13 @@ class Routeur
 						{
 							if ($action=='addRep')
 							{
-								if (isset($_POST['inscrire']))
+								if (isset($_POST['Soumettre']))
 								{
-									$monTableau['session']=$_POST['session'];
-									$monTableau['date']=$_POST['date'];
+									$monTableau['session']=$_POST['MS'];
+									$monTableau['date']=$_POST['periode'].$_POST['mois'].$_POST['jour'];
 									$monTableau['periode']=$_POST['periode'];
-									$monTableau['valide']=$_POST['valide'];
-									$monTableau['utilisateur']=$_POST['utilisateur'];
+									$monTableau['valide']=1;
+									//$monTableau['utilisateur']=$_GET['id'];
 									$this->ctrlRepas->add($monTableau);
 								}
 								else

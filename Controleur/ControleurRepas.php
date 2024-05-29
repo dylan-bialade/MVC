@@ -33,7 +33,7 @@ class ControleurRepas
 		}
 		else
 		{
-			$repas = $this->repas->addUser($tab['session'],$tab['date'],$tab['periode'],$tab['valide'],$tab['utilisateur']);
+			$repas = $this->repas->addUser($tab['session'],$tab['date'],$tab['periode'],$tab['valide']);
 	
 			$this->repas();
 		}
